@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E15FFB9-B3E5-40F2-A124-DAC9C9564A87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeightedDictionary</RootNamespace>
+    <AssemblyName>LangAnalysis_WeightedDictionary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalyzeText.cs" />
+    <Compile Include="Dictionary.cs" />
+    <Compile Include="ParseDictionary.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WeightedDictionary.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsForm_WeightedDictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm_WeightedDictionary.Designer.cs">
+      <DependentUpon>SettingsForm_WeightedDictionary.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm_WeightedDictionary.resx">
+      <DependentUpon>SettingsForm_WeightedDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries - Helpers\OutputPluginHelperObject\OutputPluginHelperLib.csproj">
+      <Project>{0c767a38-ec69-4687-879a-dccd77cbaafb}</Project>
+      <Name>OutputPluginHelperLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries - Helpers\PluginContracts\PluginContracts.csproj">
+      <Project>{a786b34a-f929-47a2-a92d-4f2f474c9aa0}</Project>
+      <Name>PluginContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\ModalityNorms.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\AuthenticityNorms.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\BrysbaertConcreteness.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\WWBP-Age.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\WWBP-Gender.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\WWBP-D3.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\WWBP-PERMA.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\WWBP-Prospection.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\Humor.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\Embodiment.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\DICLSA.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\WarrinerNorms.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\PsychoLingFeat.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\AFINN-96.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\AFINN-111.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\LabMT_Norms.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\LancasterSensorimotorNorms.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\StereotypeContentDictionary.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\WRAD.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\WRRL.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\DepecheMood.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\EvaluativeLexicon2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\Tabooness.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\Molly Lewis Gender Norms %282020-03-19%29.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\Subjectivity Lexicon Averaged.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\MoralStrength.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\WWBP-distress_lexicon.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\WWBP-empathy_lexicon.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y  "$(TargetPath)" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
