@@ -17,6 +17,7 @@ namespace WeightedDictionary
         public List<DictionaryMetaObject> DictDataToReturn;
         public Dictionary<string, string> DictDescriptions;
         public Dictionary<string, string> DictPrefixes;
+        public Dictionary<string, string> DictVariableLists;
         public bool RawFreqs;
 
        #endregion
@@ -30,6 +31,7 @@ namespace WeightedDictionary
             DictDataToReturn = Dicts;
             DictDescriptions = new Dictionary<string, string>();
             DictPrefixes = new Dictionary<string, string>();
+            DictVariableLists = new Dictionary<string, string>();
 
 
             foreach (DictionaryMetaObject Dict in Dicts)
@@ -42,6 +44,21 @@ namespace WeightedDictionary
                 { 
                     DictDescriptions.Add(Dict.DictionaryName, Dict.DictionaryDescription);
                     DictPrefixes.Add(Dict.DictionaryName, Dict.DictionaryCategoryPrefix);
+
+
+                    StringBuilder variableNameList = new StringBuilder();
+
+                    //because we haven't actually *parsed* the dictionaries yet (so far as we're aware — this isn't always true if we've loaded a pipeline)
+                    //we have to do this to get variable names
+
+                    DictParser DP = new DictParser();
+                    DictionaryMetaObject tempDictionaryForParsing = Dict;
+                    tempDictionaryForParsing.DictData = DP.ParseDict(tempDictionaryForParsing);
+                    foreach (string varName in tempDictionaryForParsing.DictData.CatNames) variableNameList.AppendLine('\t' + varName);
+
+                    DictVariableLists.Add(Dict.DictionaryName, variableNameList.ToString());
+
+
                 }
                 catch
                 {
@@ -79,16 +96,40 @@ namespace WeightedDictionary
             UpdateDescription();
         }
 
+
+
+
         private void UpdateDescription()
         {
             if (SelectedDictionariesCheckedListbox.SelectedItem != null)
             {
-                DictionaryDescriptionTextbox.Text = SelectedDictionariesCheckedListbox.SelectedItem.ToString() + Environment.NewLine + Environment.NewLine +
-                    "Output Prefix: " + DictPrefixes[SelectedDictionariesCheckedListbox.SelectedItem.ToString()] + Environment.NewLine + Environment.NewLine +
-                    DictDescriptions[SelectedDictionariesCheckedListbox.SelectedItem.ToString()];
+                StringBuilder dictionaryDescText = new StringBuilder();
+
+                //add in the name of the dictionary
+                dictionaryDescText.Append(SelectedDictionariesCheckedListbox.SelectedItem.ToString());
+
+                //add the output prefix
+                dictionaryDescText.Append(Environment.NewLine + Environment.NewLine +
+                    "Output Prefix: " + DictPrefixes[SelectedDictionariesCheckedListbox.SelectedItem.ToString()]);
+
+                //add the descriptive text
+                dictionaryDescText.Append(Environment.NewLine + Environment.NewLine +
+                    DictDescriptions[SelectedDictionariesCheckedListbox.SelectedItem.ToString()]);
+
+                //add in the variable lists
+                dictionaryDescText.Append(Environment.NewLine + Environment.NewLine +
+                    "Variable Names: " + Environment.NewLine +
+                    DictVariableLists[SelectedDictionariesCheckedListbox.SelectedItem.ToString()]);
+
+
+                DictionaryDescriptionTextbox.Text = dictionaryDescText.ToString();
             }
                 
         }
+
+
+
+
 
         private void SelectedDictionariesCheckedListbox_KeyPress(object sender, KeyPressEventArgs e)
         {

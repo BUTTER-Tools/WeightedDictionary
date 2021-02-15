@@ -318,6 +318,19 @@ namespace WeightedDictionary.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Symbol	Care_Score	Fairness_Score	Loyalty_Score	Authority_Score	Sanctity_Score	Care_Sentiment	Fairness_Sentiment	Loyalty_Sentiment	Authority_Sentiment	Sanctity_Sentiment
+        ///_intercept	0	0	0	0	0	0	0	0	0	0
+        ///brought	0.18	0.114285714	0.08	0.096551724	0.053333333	-0.235403704	-0.310015	-0.099783333	-0.402207143	-0.13255
+        ///close	0.073359073	0.031372549	0.115384615	0.077220077	0.084821429	0.136189474	-0.0439625	-0.011386667	-0.258195	0.100926316
+        ///marine	0.029850746	0.011764706	0.043859649	0.009433962	0	-0.39225	-0.025 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string eMFD {
+            get {
+                return ResourceManager.GetString("eMFD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Word	Valence	Extremity	Emotionality	Valence_StdDev	Extremity_StdDev	Emotionality_StdDev
         ///_intercept	0	0	0	0	0	0
         ///awesome	8.57	4.07	6.34	0.63	0.63	2.44

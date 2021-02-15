@@ -23,7 +23,7 @@ namespace WeightedDictionary
 
         public string PluginName { get; } = "Weighted Dictionary";
         public string PluginType { get; } = "Language Analysis";
-        public string PluginVersion { get; } = "1.2.11";
+        public string PluginVersion { get; } = "1.2.2";
         public string PluginAuthor { get; } = "Ryan L. Boyd (ryan@ryanboyd.io)";
         public string PluginDescription { get; } = "Scores texts using weighted dictionaries. For dictionaries that have intercept betas, these are also accounted for in the final scores." + Environment.NewLine + Environment.NewLine + 
                                                    "Note that each dictionary also receives a \"DictPct\" score in the output. This score reflects the number of matches each text contained, divided by Token Count. Put another way, this number tells the quantity of each text that was able to be scored for each weighted dictionary, respectively.";
@@ -252,6 +252,11 @@ namespace WeightedDictionary
             DictionaryList.Add(new DictionaryMetaObject("Evaluative Lexicon 2.0",
                                                          "Rocklage, M. D., Rucker, D. D., & Nordgren, L. F. (2018). The Evaluative Lexicon 2.0: The measurement of emotionality, extremity, and valence in language. Behavior Research Methods, 50(4), 1327–1344. https://doi.org/10.3758/s13428-017-0975-6",
                                                          "EL2_",
+                                                         Properties.Resources.EvaluativeLexicon2));
+
+            DictionaryList.Add(new DictionaryMetaObject("Extended Moral Foundations Dictionary (eMFD)",
+                                                         "Hopp, F. R., Fisher, J. T., Cornell, D., Huskey, R., & Weber, R. (2021). The extended Moral Foundations Dictionary (eMFD): Development and applications of a crowd-sourced approach to extracting moral intuitions from text. Behavior Research Methods, 53(1), 232–246. https://doi.org/10.3758/s13428-020-01433-0",
+                                                         "eMFD_",
                                                          Properties.Resources.EvaluativeLexicon2));
 
             DictionaryList.Add(new DictionaryMetaObject("Gender Norms",
