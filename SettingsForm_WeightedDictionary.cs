@@ -197,6 +197,9 @@ namespace WeightedDictionary
                         DictPrefixes.Add(InputDictData.DictionaryName, "");
                         DictDescriptions.Add(InputDictData.DictionaryName, InputDictData.DictionaryDescription);
 
+                        StringBuilder variableNameList = new StringBuilder();
+                        foreach (string varName in InputDictData.DictData.CatNames) variableNameList.AppendLine('\t' + varName);
+                        DictVariableLists.Add(InputDictData.DictionaryName, variableNameList.ToString());
 
                     }
                     catch
