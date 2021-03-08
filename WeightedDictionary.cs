@@ -23,7 +23,7 @@ namespace WeightedDictionary
 
         public string PluginName { get; } = "Weighted Dictionary";
         public string PluginType { get; } = "Language Analysis";
-        public string PluginVersion { get; } = "1.2.2";
+        public string PluginVersion { get; } = "1.2.03";
         public string PluginAuthor { get; } = "Ryan L. Boyd (ryan@ryanboyd.io)";
         public string PluginDescription { get; } = "Scores texts using weighted dictionaries. For dictionaries that have intercept betas, these are also accounted for in the final scores." + Environment.NewLine + Environment.NewLine + 
                                                    "Note that each dictionary also receives a \"DictPct\" score in the output. This score reflects the number of matches each text contained, divided by Token Count. Put another way, this number tells the quantity of each text that was able to be scored for each weighted dictionary, respectively.";
@@ -203,6 +203,12 @@ namespace WeightedDictionary
         {
             DictionaryList = new List<DictionaryMetaObject>();
             ListOfBuiltInDictionaries = new HashSet<string>();
+
+            DictionaryList.Add(new DictionaryMetaObject("Abusive Words Lexicon",
+                                                         "Wiegand, M., Ruppenhofer, J., Schmidt, A., & Greenberg, C. (2018). Inducing a lexicon of abusive words: A feature-based approach. Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers), 1046–1056. https://doi.org/10.18653/v1/N18-1095" + Environment.NewLine + Environment.NewLine +
+                                                         "Notes: This version of the dictionary is the \"extended\" version from the research listed above. This dictionary version is not sensitive to parts of speech.",
+                                                         "AWL_",
+                                                         Properties.Resources.Weigand_et_al___2018____Abuse_Lexicon));
 
             DictionaryList.Add(new DictionaryMetaObject("Affective Norms, Warriner",
                                                          "Warriner, A. B., Kuperman, V., & Brysbaert, M. (2013). Norms of valence, arousal, and dominance for 13,915 English lemmas. Behavior Research Methods, 45(4), 1191–1207. https://doi.org/10.3758/s13428-012-0314-x",

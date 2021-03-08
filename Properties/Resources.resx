@@ -208,4 +208,7 @@
   <data name="eMFD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Dictionaries\eMFD.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="Weigand_et_al___2018____Abuse_Lexicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dictionaries\Weigand et al. (2018) - Abuse Lexicon.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
 </root>

@@ -560,6 +560,41 @@ namespace WeightedDictionary.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Term	Weight
+        ///_intercept	0
+        ///86	-0.36762453
+        ///187	0.71754986
+        ///419	0.35754864
+        ///1984	-0.92403619
+        ///mar	-0.860149045
+        ///abandon	-1.2974445
+        ///abandoned	-0.73056376
+        ///abandonment	-1.4973582
+        ///abase	-0.26232919
+        ///abased	0.12957497
+        ///abasement	-0.43956094
+        ///abash	-0.42695165
+        ///abashed	-0.37630988
+        ///abate	-2.4967846
+        ///abatis	-0.035499173
+        ///abdicate	-1.5551716
+        ///abdication	-1.4990237
+        ///abduct	-1.2778002
+        ///aberrant	-0.95093594
+        ///aberration	-1.2429533
+        ///aberrometry	0.28022696
+        ///abet	-1.9204496
+        ///abhor	0.21297482
+        ///abhorrence	-0.91331732
+        ///abh [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Weigand_et_al___2018____Abuse_Lexicon {
+            get {
+                return ResourceManager.GetString("Weigand_et_al___2018____Abuse_Lexicon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Symbol	ReferentialActivity
         ///_intercept	0
         ///1	1
