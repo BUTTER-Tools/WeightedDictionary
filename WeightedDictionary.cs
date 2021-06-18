@@ -23,7 +23,7 @@ namespace WeightedDictionary
 
         public string PluginName { get; } = "Weighted Dictionary";
         public string PluginType { get; } = "Language Analysis";
-        public string PluginVersion { get; } = "1.2.03";
+        public string PluginVersion { get; } = "1.2.04";
         public string PluginAuthor { get; } = "Ryan L. Boyd (ryan@ryanboyd.io)";
         public string PluginDescription { get; } = "Scores texts using weighted dictionaries. For dictionaries that have intercept betas, these are also accounted for in the final scores." + Environment.NewLine + Environment.NewLine + 
                                                    "Note that each dictionary also receives a \"DictPct\" score in the output. This score reflects the number of matches each text contained, divided by Token Count. Put another way, this number tells the quantity of each text that was able to be scored for each weighted dictionary, respectively.";
@@ -325,6 +325,11 @@ namespace WeightedDictionary
                                                         "Mean_Age_Action: Average age of participants in action strength norming who completed the item list featuring the concept (i.e., who were presented with the concept for rating)",
                                                          "Lanc_",
                                                          Properties.Resources.LancasterSensorimotorNorms));
+
+            DictionaryList.Add(new DictionaryMetaObject("Mental-Physical Verb Norms",
+                                                      "Orr, R. I., & Gilead, M. (2021). Supplemental materials for development and validation of the mental-physical verb norms (MPVN): A text analysis measure of mental state attribution. https://osf.io/5cez7/",
+                                                      "MPVN_",
+                                                      Properties.Resources.Orr___Gilead__review____Mental_Physical_Verb_Norms));
 
             DictionaryList.Add(new DictionaryMetaObject("Modality Norms, Adj + Nouns",
                                                       "Lynott, D., & Connell, L. (2009). Modality exclusivity norms for 423 object properties. Behavior Research Methods, 41(2), 558–564. https://doi.org/10.3758/BRM.41.2.558" + Environment.NewLine + Environment.NewLine +

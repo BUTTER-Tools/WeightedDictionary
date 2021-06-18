@@ -465,6 +465,44 @@ namespace WeightedDictionary.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Word	Mean
+        ///_intercept	0
+        ///say	38.75438596
+        ///go	16.24528302
+        ///get	19.60377358
+        ///make	18.20754717
+        ///know	92.89090909
+        ///think	92.22222222
+        ///take	19.8490566
+        ///see	41.66666667
+        ///come	17.36538462
+        ///want	85.64150943
+        ///look	33.45283019
+        ///use	28.12962963
+        ///find	31.89090909
+        ///give	25.92592593
+        ///tell	43.33333333
+        ///work	34.26785714
+        ///call	27.66666667
+        ///try	53.98214286
+        ///ask	47.71929825
+        ///need	79.56363636
+        ///feel	65.01818182
+        ///become	63.77777778
+        ///leave	18.98148148
+        ///put	15.24528302
+        ///mean	80.39622642
+        ///keep	35.92727273
+        ///let	54.42105263
+        ///begin	44 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Orr___Gilead__review____Mental_Physical_Verb_Norms {
+            get {
+                return ResourceManager.GetString("Orr___Gilead__review____Mental_Physical_Verb_Norms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Symbol	Familiarity	AoA	Concreteness	Imagery
         ///_intercept	0	0	0	0
         ///biennials	340.4342822	442.0392483	392.7401914	389.3510129

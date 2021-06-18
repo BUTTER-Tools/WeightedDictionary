@@ -172,6 +172,9 @@
   <ItemGroup>
     <None Include="Dictionaries\Weigand et al. %282018%29 - Abuse Lexicon.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Dictionaries\Orr &amp; Gilead %28review%29 - Mental-Physical Verb Norms.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /y  "$(TargetPath)" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\"</PostBuildEvent>
